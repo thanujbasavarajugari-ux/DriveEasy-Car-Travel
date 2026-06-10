@@ -20,8 +20,10 @@ bookingForm.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
+    alert("SUBMIT CLICKED");
+
     const booking = {
-        fullname: document.getElementById("fullName").value,
+        fullname: document.getElementById("fullname").value,
         email: document.getElementById("email").value,
         phone: document.getElementById("phone").value,
         pickup_date: document.getElementById("pickup_date").value,
