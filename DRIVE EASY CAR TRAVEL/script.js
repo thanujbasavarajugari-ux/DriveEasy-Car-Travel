@@ -1,3 +1,5 @@
+alert("SCRIPT LOADED");
+
 const SUPABASE_URL =
 "https://glqaoesroggpjrrryjan.supabase.co";
 
@@ -54,8 +56,5 @@ bookingForm.addEventListener("submit", async (e) => {
             err.message
         );
     }
-
 });
-```
-
 }
