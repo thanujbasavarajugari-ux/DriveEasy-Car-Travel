@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Registration Form</title>
+
+    <style>
+
+        body{
+            font-family: Georgia, serif;
+            margin: 30px;
+            background-color: #f5f5f5;
+        }
+
+        h1{
+            font-size: 55px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        fieldset{
+            width: 700px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        legend{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        table{
+            width: 100%;
+        }
+
+        td{
+            padding: 8px;
+            font-size: 18px;
+        }
+
+        input, select, textarea{
+            font-size: 16px;
+            padding: 6px;
+        }
+
+        textarea{
+            width: 95%;
+            height: 100px;
+        }
+
+        button{
+            padding: 8px 18px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Course Registration Form</h1>
+
+    <form>
+
+        <!-- Personal Details -->
+
+        <fieldset>
+
+            <legend>Personal details</legend>
+
+            <table>
+
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" placeholder="Ex:Thanuj">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Surname</td>
+                    <td>
+                        <input type="text" placeholder="Ex:B">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mobile number</td>
+                    <td>
+                        <input type="tel" placeholder="Ex:987-897-0987">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" placeholder="Ex:thanuj@gmail.com">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" placeholder="min 5 characters">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Confirm Password</td>
+                    <td>
+                        <input type="password" placeholder="min 5 characters">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>DOB</td>
+                    <td>
+                        <input type="date">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender"> Male
+
+                        <input type="radio" name="gender"> Female
+
+                        <input type="radio" name="gender"> Custom
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Select Country</td>
+                    <td>
+                        <select>
+                            <option>INDIA</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                            <option>CANADA</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Upload Picture</td>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+
+        <!-- Course Details -->
+
+        <fieldset>
+
+            <legend>Course Details</legend>
+
+            <table>
+
+                <tr>
+                    <td>Select Course</td>
+                    <td>
+                        <select>
+                            <option>Python Full Stack</option>
+                            <option>Java Full Stack</option>
+                            <option>MERN Stack</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Delivery Mode</td>
+                    <td>
+                        <input type="checkbox"> ONLINE
+
+                        <input type="checkbox"> OFFLINE
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Comments</td>
+                    <td>
+                        <textarea placeholder="Enter your comments"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

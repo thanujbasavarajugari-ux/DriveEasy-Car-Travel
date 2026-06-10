@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Life & Skills Portfolio</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+            color:white;
+            overflow-x:hidden;
+        }
+
+        /* Animated Background */
+
+        body::before{
+            content:"";
+            position:fixed;
+            width:200%;
+            height:200%;
+            background:
+            radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%);
+            background-size:50px 50px;
+            animation: moveBg 20s linear infinite;
+            z-index:-1;
+        }
+
+        @keyframes moveBg{
+
+            0%{
+                transform:translate(0,0);
+            }
+
+            100%{
+                transform:translate(-100px,-100px);
+            }
+
+        }
+
+        /* Main Container */
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            padding:40px 0;
+        }
+
+        /* Hero Section */
+
+        .hero{
+
+            text-align:center;
+
+            min-height:100vh;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+            animation: fadeIn 2s ease;
+
+        }
+
+        .hero h1{
+
+            font-size:65px;
+            margin-bottom:20px;
+            text-transform:uppercase;
+            letter-spacing:4px;
+
+            animation: glow 2s infinite alternate;
+
+        }
+
+        .hero p{
+
+            font-size:28px;
+            color:#dbeafe;
+
+        }
+
+        @keyframes glow{
+
+            from{
+                text-shadow:0 0 10px #60a5fa;
+            }
+
+            to{
+                text-shadow:0 0 35px #93c5fd;
+            }
+
+        }
+
+        @keyframes fadeIn{
+
+            from{
+                opacity:0;
+                transform:translateY(-40px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        /* Cards */
+
+        .card{
+
+            background:rgba(255,255,255,0.1);
+
+            backdrop-filter:blur(10px);
+
+            border-radius:20px;
+
+            padding:30px;
+
+            margin:30px 0;
+
+            box-shadow:0 8px 25px rgba(0,0,0,0.3);
+
+            transition:0.4s;
+
+            animation: slideUp 1s ease;
+
+        }
+
+        .card:hover{
+
+            transform:translateY(-10px) scale(1.02);
+
+            box-shadow:0 10px 30px rgba(255,255,255,0.3);
+
+        }
+
+        @keyframes slideUp{
+
+            from{
+                opacity:0;
+                transform:translateY(50px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        h2{
+
+            font-size:32px;
+            margin-bottom:20px;
+            color:#93c5fd;
+
+        }
+
+        h3{
+
+            margin-top:20px;
+            color:#bfdbfe;
+
+        }
+
+        ul,ol{
+
+            margin-left:25px;
+
+        }
+
+        li{
+
+            margin:12px 0;
+            font-size:18px;
+
+        }
+
+        p{
+
+            font-size:18px;
+            line-height:1.8;
+
+        }
+
+        /* Footer */
+
+        footer{
+
+            text-align:center;
+            padding:30px;
+            margin-top:40px;
+            color:#cbd5e1;
+            font-size:18px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+
+        <section class="hero">
+
+            <h1>🚀 My Life & Skills Portfolio 🚀</h1>
+
+            <p>
+                Frontend Developer | Tech Enthusiast | AI Learner
+            </p>
+
+        </section>
+
+        <!-- Major Life Events -->
+
+        <div class="card">
+
+            <h2>🌟 Major Life Events</h2>
+
+            <ol>
+                <li>Born in 2004</li>
+                <li>Completed NPTEL Online Certifications in 2025</li>
+                <li>Graduating in 2026</li>
+                <li>Got First Job in 2026</li>
+            </ol>
+
+        </div>
+
+        <!-- Achievements -->
+
+        <div class="card">
+
+            <h2>🏆 Achievements & Certifications</h2>
+
+            <ul>
+                <li>INTERNSHIP certification - JAVA FULL STACK & AI</li>
+                <li>NPTEL Certification - THE JOY OF COMPUTINNG USING PYTHON</li>
+            </ul>
+
+        </div>
+
+        <!-- Projects -->
+
+        <div class="card">
+
+            <h2>🔬 Research Projects</h2>
+
+            <ol>
+                <li>AI in Healthcare</li>
+                <li>Machine Learning in Agriculture</li>
+            </ol>
+
+        </div>
+
+        <!-- Technical Skills -->
+
+        <div class="card">
+
+            <h2>💻 Technical Skills</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+        </div>
+
+        <!-- Tech Glossary -->
+
+        <div class="card">
+
+            <h2>📘 Tech Glossary</h2>
+
+            <h3>🌐 HTML</h3>
+
+            <p>
+                HTML stands for HyperText Markup Language.
+                It is used to create the structure of web pages.
+            </p>
+
+            <h3>🎨 CSS</h3>
+
+            <p>
+                CSS stands for Cascading Style Sheets.
+                It is used to style and design websites beautifully.
+            </p>
+
+            <h3>⚡ JavaScript</h3>
+
+            <p>
+                JavaScript is used to make websites interactive and dynamic.
+            </p>
+
+        </div>
+
+        <!-- Tools -->
+
+        <div class="card">
+
+            <h2>🛠️ Tools I Use</h2>
+
+            <ul>
+                <li>VS Code</li>
+                <li>GitHub</li>
+                <li>Eclipse IDE</li>
+            </ul>
+
+        </div>
+
+        <!-- Hobbies -->
+
+        <div class="card">
+
+            <h2>🎯 Hobbies</h2>
+
+            <ul>
+                <li>Travelling ✈️</li>
+                <li>Photography 📸</li>
+                <li>Event Organizing</li>
+            </ul>
+
+        </div>
+
+        <!-- Personal Development -->
+
+        <div class="card">
+
+            <h2>📈 Personal Development Plan</h2>
+
+            <h3>🎯 Short-Term Goals</h3>
+
+            <ul>
+                <li>Master React</li>
+                <li>Get AWS Certified</li>
+            </ul>
+
+            <h3>🚀 Long-Term Goals</h3>
+
+            <ul>
+                <li>Build a SaaS Product</li>
+                <li>Start a Tech YouTube Channel</li>
+            </ul>
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer>
+
+            ✨ Designed & Developed by LITHISH J ✨
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

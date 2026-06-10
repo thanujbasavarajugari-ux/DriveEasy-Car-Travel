@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Portfolio | THANUJ</title>
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg,#020617,#0f172a,#111827);
+            color: white;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            padding: 18px;
+            z-index: 1000;
+
+            box-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        nav ul li a:hover{
+            color: cyan;
+
+            text-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MAIN HEADING */
+
+        h1{
+            font-size: 70px;
+            text-align: center;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+
+            text-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan,
+            0 0 40px cyan,
+            0 0 80px cyan;
+
+            animation: glow 2s infinite alternate;
+        }
+
+        /* SUB HEADING */
+
+        .hero h2{
+            margin-top: 20px;
+            font-size: 32px;
+            color: white;
+
+            text-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+
+            animation: slideDown 2s ease;
+        }
+
+        .hero p{
+            margin-top: 25px;
+            width: 75%;
+            font-size: 20px;
+            color: #d1d5db;
+        }
+
+        /* RESUME BUTTON */
+
+        .resume-btn{
+            margin-top: 35px;
+            padding: 14px 30px;
+            border-radius: 40px;
+            background: cyan;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.4s;
+
+            box-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        .resume-btn:hover{
+            transform: scale(1.1);
+            background: white;
+
+            box-shadow:
+            0 0 20px white,
+            0 0 40px cyan;
+        }
+
+        /* SECTION */
+
+        section{
+            padding: 90px 10%;
+        }
+
+        /* AI GLOWING HEADINGS */
+
+        section h2{
+            font-size: 42px;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+
+            text-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan,
+            0 0 40px cyan;
+
+            animation: slideDown 1.5s ease;
+        }
+
+        section h2::after{
+            content: "";
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: cyan;
+            margin: 12px auto;
+            border-radius: 20px;
+
+            box-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        h3{
+            color: cyan;
+            font-size: 28px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+
+            border-left: 5px solid cyan;
+
+            text-shadow:
+            0 0 10px cyan;
+
+            transition: 0.4s;
+        }
+
+        h3:hover{
+            transform: translateX(10px);
+            color: white;
+        }
+
+        /* CARD */
+
+        .card{
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+
+            backdrop-filter: blur(10px);
+
+            transition: 0.4s;
+        }
+
+        .card:hover{
+            transform: translateY(-10px);
+
+            box-shadow:
+            0 0 20px cyan,
+            0 0 40px cyan;
+        }
+
+        /* SKILLS GRID */
+
+        .skills{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 25px;
+        }
+
+        ul li{
+            margin: 10px 0;
+        }
+
+        /* CONTACT */
+
+        .contact-info p{
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        /* SOCIAL ICONS */
+
+        .social-icons{
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-icons a{
+            color: white;
+            font-size: 38px;
+            margin: 15px;
+            transition: 0.4s;
+        }
+
+        .social-icons a:hover{
+            color: cyan;
+
+            transform: scale(1.3);
+
+            text-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        /* FOOTER */
+
+        footer{
+            text-align: center;
+            padding: 30px;
+            background: black;
+            margin-top: 40px;
+
+            box-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes glow{
+
+            from{
+                text-shadow:
+                0 0 10px cyan,
+                0 0 20px cyan;
+            }
+
+            to{
+                text-shadow:
+                0 0 20px cyan,
+                0 0 40px cyan,
+                0 0 80px cyan;
+            }
+
+        }
+
+        @keyframes slideDown{
+
+            from{
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <div class="hero">
+
+        <h1>BASAVARAJUGARI THANUJ</h1>
+
+        <h2>🚀 Java Full Stack Developer 🚀</h2>
+
+        <p>
+            Passionate Full Stack Developer skilled in Java, Spring Boot,
+            React.js, MySQL and AI technologies.
+            Building modern responsive and intelligent applications.
+        </p>
+
+        <a href="./resume1.pdf"
+        download="BASAVARAJUGARI_THANUJ_Resume.pdf"
+        class="resume-btn">
+
+        📄 Download Resume
+
+        </a>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="card">
+
+            <p>
+                I am a passionate and self-motivated Java Full Stack Developer
+                with strong knowledge in Java, Spring Boot, MySQL, HTML, CSS,
+                JavaScript, and React.js.
+                I enjoy building responsive web applications and solving
+                real-world problems through technology.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <div class="card">
+
+                <h3>Frontend</h3>
+
+                <ul>
+
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React.js</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Backend</h3>
+
+                <ul>
+
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>JDBC</li>
+                    <li>REST APIs</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Database</h3>
+
+                <ul>
+
+                    <li>MySQL</li>
+                    <li>Oracle DB</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <!-- PROJECT 1 -->
+
+        <div class="card">
+
+            <h3>
+                Doctor Appointment Management System
+            </h3>
+
+            <p>
+                <strong>Duration :</strong> Oct 2025 – Present
+            </p>
+
+            <p>
+                <strong>Technologies :</strong>
+                Java — JDBC — MySQL — HTML — CSS
+            </p>
+
+            <ul>
+
+                <li>
+                    Designed backend logic using Java & OOP principles.
+                </li>
+
+                <li>
+                    Implemented CRUD operations for appointment management.
+                </li>
+
+                <li>
+                    Integrated MySQL database for efficient storage and retrieval.
+                </li>
+
+                <li>
+                    Built responsive UI using HTML & CSS.
+                </li>
+
+                <li>
+                    Reduced manual booking effort and improved scheduling efficiency.
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+
+        <div class="card">
+
+            <h3>
+                REST API Based CRUD Application
+            </h3>
+
+            <p>
+                <strong>Technologies :</strong>
+                Java — Spring Boot — REST API
+            </p>
+
+            <ul>
+
+                <li>
+                    Developed RESTful APIs using Spring Boot.
+                </li>
+
+                <li>
+                    Followed MVC architecture for backend development.
+                </li>
+
+                <li>
+                    Improved understanding of API structuring.
+                </li>
+
+                <li>
+                    Tested APIs using Postman.
+                </li>
+
+                <li>
+                    Enhanced debugging and backend development skills.
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+
+        <div class="card">
+
+            <h3>
+                Political Tweet Sentiment Analysis
+            </h3>
+
+            <p>
+                <strong>Technologies :</strong>
+                NLP — Machine Learning
+            </p>
+
+            <ul>
+
+                <li>
+                    Performed text preprocessing and tokenization.
+                </li>
+
+                <li>
+                    Applied stop-word removal and stemming techniques.
+                </li>
+
+                <li>
+                    Used ML algorithms for sentiment classification.
+                </li>
+
+                <li>
+                    Analyzed tweet datasets to identify public opinion trends.
+                </li>
+
+                <li>
+                    Improved skills in Natural Language Processing (NLP).
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- CERTIFICATES -->
+
+    <section id="certificates">
+
+        <h2>Certificates</h2>
+
+        <div class="card">
+
+            <ul>
+
+                <li>Full Stack Java & AI Internship Certificate</li>
+
+                <li>Advanced Python Workshop Certificate</li>
+
+                <li>NCC ‘A’ Certificate</li>
+
+                <li>IBM Artificial Intelligence Fundamentals</li>
+
+                <li>NPTEL Python Certificate</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <div class="card contact-info">
+
+            <p>
+                <strong>Email :</strong>
+                thanujbasavarajugari@gmail.com
+            </p>
+
+            <p>
+                <strong>Phone :</strong>
+                7569782982
+            </p>
+
+            <p>
+                <strong>Location :</strong>
+                Bangalore, Karnataka
+            </p>
+
+        </div>
+
+        <!-- SOCIAL ICONS -->
+
+        <div class="social-icons">
+
+            <a href="https://www.linkedin.com/in/basavarajugari-thanuj"
+            target="_blank">
+
+            <i class="fab fa-linkedin"></i>
+
+            </a>
+
+            <a href="https://github.com/thanujbasavarajugari-ux"
+            target="_blank">
+
+            <i class="fab fa-github"></i>
+
+            </a>
+
+            <a href="https://www.instagram.com/thanuj_thanu_/"
+            target="_blank">
+
+            <i class="fab fa-instagram"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 BASAVARAJUGARI THANUJ | AI Portfolio
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DriveEasy Booking Records</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#0f172a;
+}
+
+.table-container{
+    overflow-x:auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#06b6d4;
+    color:white;
+    padding:14px;
+    text-align:left;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#f8fafc;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🚗 DriveEasy Booking Records</h1>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Date</th>
+<th>Pickup</th>
+<th>Drop</th>
+<th>Passengers</th>
+<th>Vehicle</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="bookingData">
+</tbody>
+
+</table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const SUPABASE_URL =
+"https://glqaoesroggpjrrryjan.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_KIqnwBxwxww7Wn0j7O6SDQ_nTJldkWX";
+
+const supabaseClient =
+supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+async function loadBookings() {
+
+    const { data, error } =
+    await supabaseClient
+    .from("bookings")
+    .select("*")
+    .order("id", { ascending: false });
+
+    if(error){
+
+        console.log(error);
+
+        alert(
+        "Error: " +
+        error.message
+        );
+
+        return;
+    }
+
+    let rows = "";
+
+    data.forEach(item => {
+
+       rows += `
+<tr>
+<td>${item.id}</td>
+<td>${item.fullname}</td>
+<td>${item.email}</td>
+<td>${item.phone}</td>
+<td>${item.pickup_date}</td>
+<td>${item.pickup_location}</td>
+<td>${item.drop_location}</td>
+<td>${item.passengers}</td>
+<td>${item.car_name}</td>
+<td>
+<button onclick="deleteBooking(${item.id})"
+style="background:red;color:white;border:none;padding:8px 12px;border-radius:5px;cursor:pointer;">
+Delete
+</button>
+</td>
+</tr>
+`;
+    });
+
+    document
+    .getElementById("bookingData")
+    .innerHTML = rows;
+}
+console.log("https://glqaoesroggpjrrryjan.supabase.co/rest/v1/bookings?select=*");
+
+loadBookings();
+
+async function deleteBooking(id){
+
+if(!confirm("Delete this booking?")) return;
+
+const { error } = await supabaseClient
+.from("bookings")
+.delete()
+.eq("id", id);
+
+if(error){
+alert("Delete Failed");
+console.log(error);
+}else{
+alert("Booking Deleted");
+loadBookings();
+}
+
+}
+
+</script>
+
+</body>
+</html>

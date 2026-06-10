@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- META TAGS -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="NAVYASRI GOPANA, | Software testing with java automation-sdet">
+
+    <meta name="keywords"
+        content="NAVYASRI GOPANA, | Software testing with java automation-sdet">
+
+    <meta name="author"
+        content="NAVYASRI GOPANA">
+
+    <meta name="theme-color"
+        content="#050816">
+
+    <title>
+        NAVYASRI GOPANA | Portfolio
+    </title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- DEVICON -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#050816;
+            color:white;
+            overflow-x:hidden;
+        }
+
+        /* HEADER */
+
+        header{
+
+            width:100%;
+
+            padding:22px 8%;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            position:fixed;
+
+            top:0;
+
+            left:0;
+
+            z-index:1000;
+
+            background:rgba(5,8,22,0.95);
+
+            backdrop-filter:blur(14px);
+
+            border-bottom:1px solid rgba(0,255,255,0.2);
+
+            box-shadow:
+            0 0 20px rgba(0,255,255,0.25),
+            0 8px 30px rgba(0,255,255,0.08);
+
+        }
+
+        /* LOGO */
+
+        .logo{
+            font-size:32px;
+            font-weight:700;
+            color:cyan;
+            text-shadow:0 0 20px cyan;
+        }
+
+        /* NAVIGATION */
+
+        nav{
+
+            display:flex;
+
+            gap:35px;
+
+        }
+
+        /* NAV LINKS */
+
+        nav a{
+
+            position:relative;
+
+            color:white;
+
+            text-decoration:none;
+
+            font-size:18px;
+
+            font-weight:600;
+
+            padding:10px 18px;
+
+            border-radius:12px;
+
+            transition:0.4s;
+
+            overflow:hidden;
+
+        }
+
+        /* HOVER EFFECT */
+
+        nav a:hover{
+
+            color:#00ffff;
+
+            background:rgba(0,255,255,0.08);
+
+            box-shadow:
+            0 0 15px rgba(0,255,255,0.4);
+
+            transform:translateY(-3px);
+
+        }
+
+        /* GLOW UNDERLINE */
+
+        nav a::after{
+
+            content:"";
+
+            position:absolute;
+
+            left:50%;
+
+            bottom:0;
+
+            width:0%;
+
+            height:3px;
+
+            background:linear-gradient(
+                90deg,
+                cyan,
+                #00ff88
+            );
+
+            border-radius:20px;
+
+            transition:0.4s;
+
+            transform:translateX(-50%);
+
+        }
+
+        nav a:hover::after{
+
+            width:80%;
+
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:130px 8%;
+            background:
+            radial-gradient(circle at top left, rgba(0,255,255,0.15), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(0,255,136,0.15), transparent 30%),
+            #050816;
+        }
+
+        .hero-container{
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:80px;
+        }
+
+        /* LEFT */
+
+        .hero-left{
+            flex:1;
+        }
+
+        .small-title{
+            color:#00ff88;
+            letter-spacing:4px;
+            margin-bottom:20px;
+            font-size:14px;
+            font-weight:600;
+        }
+
+        .main-name{
+            font-size:78px;
+            font-weight:800;
+            line-height:1.2;
+            margin-bottom:20px;
+        }
+
+        .highlight-name{
+
+            background:linear-gradient(
+                90deg,
+                cyan,
+                #00ff88,
+                white,
+                cyan
+            );
+
+            background-size:300%;
+
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+
+            animation:glowMove 5s linear infinite;
+
+        }
+
+        @keyframes glowMove{
+
+            0%{
+                background-position:0%;
+            }
+
+            100%{
+                background-position:300%;
+            }
+
+        }
+
+        .typing{
+            font-size:34px;
+            margin-bottom:25px;
+            color:white;
+            font-weight:600;
+        }
+
+        .hero-text{
+            color:#cbd5e1;
+            line-height:1.9;
+            font-size:18px;
+            max-width:700px;
+        }
+
+        .hero-text span{
+            color:#00ff88;
+            font-weight:700;
+        }
+
+        .hero-text strong{
+            color:cyan;
+        }
+
+        /* BUTTONS */
+
+        .buttons{
+            margin-top:40px;
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .btn1{
+            padding:15px 35px;
+            border-radius:12px;
+            background:linear-gradient(45deg,cyan,#00ff88);
+            color:black;
+            text-decoration:none;
+            font-weight:700;
+            transition:0.4s;
+        }
+
+        .btn1:hover{
+            transform:translateY(-5px);
+            box-shadow:0 0 25px cyan;
+        }
+
+        .btn2{
+            padding:15px 35px;
+            border:2px solid cyan;
+            border-radius:12px;
+            text-decoration:none;
+            color:cyan;
+            font-weight:700;
+            transition:0.4s;
+        }
+
+        .btn2:hover{
+            background:cyan;
+            color:black;
+        }
+
+        .btn3{
+
+            padding:15px 35px;
+
+            border-radius:12px;
+
+            background:transparent;
+
+            border:2px solid #00ff88;
+
+            color:#00ff88;
+
+            text-decoration:none;
+
+            font-weight:700;
+
+            transition:0.4s;
+
+            display:flex;
+
+            align-items:center;
+
+            gap:10px;
+
+        }
+
+        .btn3:hover{
+
+            background:#00ff88;
+
+            color:black;
+
+            transform:translateY(-5px);
+
+            box-shadow:0 0 25px #00ff88;
+
+        }
+
+        /* RIGHT IMAGE */
+
+        .hero-right{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .image-box{
+
+            width:500px;
+
+            height:620px;
+
+            border-radius:30px;
+
+            padding:8px;
+
+            background:linear-gradient(
+                135deg,
+                cyan,
+                #00ff88,
+                #ffffff
+            );
+
+            box-shadow:
+            0 0 25px cyan,
+            0 0 60px rgba(0,255,255,0.35);
+
+            overflow:hidden;
+
+            animation:float 4s ease-in-out infinite;
+
+        }
+
+        @keyframes float{
+
+            50%{
+                transform:translateY(-15px);
+            }
+
+        }
+
+        .profile-image{
+
+            width:100%;
+
+            height:100%;
+
+            object-fit:cover;
+
+            object-position:center top;
+
+            border-radius:25px;
+
+            display:block;
+
+            border:5px solid #050816;
+
+        }
+
+        /* COMMON */
+
+        section{
+            padding:100px 8%;
+        }
+
+        .title{
+            text-align:center;
+            font-size:45px;
+            margin-bottom:60px;
+            color:cyan;
+            text-shadow:0 0 15px cyan;
+        }
+
+        /* ABOUT */
+
+        .about p{
+            max-width:950px;
+            margin:auto;
+            text-align:center;
+            line-height:2;
+            color:#d1d5db;
+            font-size:18px;
+        }
+
+        /* SKILLS */
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+}
+
+.skill-card{
+    width:300px;
+    min-height:450px;
+    background:#08152d;
+    border:1px solid #1e3a5f;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    transition:0.4s ease;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(0,229,255,0.4);
+}
+
+/* Skill Heading */
+.skill-card h4{
+    color:#00e5ff;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:20px;
+    text-shadow:0 0 15px rgba(0,229,255,0.7);
+}
+
+/* Skill Description */
+.skill-card p{
+    color:#ffffff;
+    font-size:17px;
+    line-height:1.8;
+    text-align:center;
+}
+
+/* Highlight Important Keywords */
+.highlight{
+    color:#ffd700;
+    font-weight:700;
+}
+
+        .project-card{
+
+            background:#111827;
+
+            padding:35px;
+
+            border-radius:20px;
+
+            transition:0.4s;
+
+            border:1px solid rgba(255,255,255,0.05);
+
+        }
+
+        .project-card:hover{
+
+            transform:translateY(-10px);
+
+            box-shadow:0 0 25px rgba(0,255,255,0.35);
+
+        }
+
+        .project-card h3{
+
+            color:cyan;
+
+            margin-bottom:18px;
+
+            font-size:24px;
+
+        }
+
+        .project-card p{
+
+            color:#d1d5db;
+
+            line-height:1.8;
+
+            font-size:16px;
+
+        }
+
+        /* CONTACT */
+
+        .contact{
+            text-align:center;
+        }
+
+        .contact p{
+            margin-top:18px;
+        }
+
+        .contact-link{
+
+            color:white;
+
+            text-decoration:none;
+
+            font-size:24px;
+
+            font-weight:500;
+
+            transition:0.3s;
+
+            display:inline-flex;
+
+            align-items:center;
+
+            gap:14px;
+
+        }
+
+        .contact-link i{
+
+            color:cyan;
+
+            font-size:26px;
+
+        }
+
+        .contact-link:hover{
+
+            color:cyan;
+
+            transform:scale(1.05);
+
+        }
+
+        .social-icons{
+            margin-top:40px;
+        }
+
+        .social-icons a{
+
+            color:white;
+
+            font-size:36px;
+
+            margin:0 18px;
+
+            transition:0.3s;
+
+        }
+
+        .social-icons a:hover{
+
+            color:cyan;
+
+            transform:translateY(-8px) scale(1.2);
+
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#111827;
+            padding:30px;
+            text-align:center;
+            margin-top:40px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:991px){
+
+            .hero-container{
+                flex-direction:column-reverse;
+                text-align:center;
+            }
+
+            .main-name{
+                font-size:55px;
+            }
+
+            .buttons{
+                justify-content:center;
+            }
+
+            .image-box{
+
+                width:350px;
+
+                height:450px;
+
+            }
+
+        }
+
+        @media(max-width:600px){
+
+            header{
+                flex-direction:column;
+            }
+
+            nav{
+                margin-top:15px;
+                gap:10px;
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            nav a{
+                margin:0;
+                font-size:15px;
+            }
+
+            .main-name{
+                font-size:40px;
+            }
+
+            .typing{
+                font-size:24px;
+            }
+
+            .buttons{
+                flex-direction:column;
+            }
+
+            .image-box{
+
+                width:260px;
+
+                height:340px;
+
+            }
+
+            .contact-link{
+                font-size:18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        NAVYASRI GOPANA
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#certifications">Certifications</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#contact">Contact</a>
+
+
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <!-- LEFT -->
+
+        <div class="hero-left">
+
+            <p class="small-title">
+                AVAILABLE FOR HIRING
+            </p>
+
+            <h1 class="main-name">
+
+                Hi, I'm
+
+                <span class="highlight-name">
+                    NAVYASRI GOPANA
+                </span>
+
+            </h1>
+
+            <div class="typing">
+                Software testing with java automation-sdet
+            </div>
+
+            <p class="hero-text">
+
+                Building <span>modern</span> responsive web applications using
+                <strong>Java</strong>,
+                <strong>Spring Boot</strong>,
+                <strong>React JS</strong>
+                and latest technologies.
+
+            </p>
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <a href="#contact" class="btn1">
+                    Hire Me
+                </a>
+
+                <a href="#projects" class="btn2">
+                    View Projects
+                </a>
+
+                <a
+                    href="Navyasri Gopana.pdf"
+                    class="btn3"
+                    target="_blank"
+                >
+
+                    <i class="fas fa-file-download"></i>
+
+                    Resume
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-right">
+
+            <div class="image-box">
+
+                <img
+                    src="Navyasri.jpeg"
+                    class="profile-image"
+                    alt="Navyasri">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+    <h2 class="title">
+        About Me
+    </h2>
+
+    <p>
+        Hello, I'm Navyasri Gopana, a Computer Science and Engineering (AI) undergraduate passionate about Software Testing and Quality Assurance. I have hands-on experience in Manual Testing, Selenium Automation Testing, API Testing using Postman, and SQL Database Testing. Through my SDET training at QSpiders, I have gained practical knowledge of SDLC, STLC, Test Case Design, Defect Reporting, Regression Testing, and Automation Frameworks.
+
+I am proficient in Java, Selenium WebDriver, TestNG, Maven, Postman, and Oracle SQL. I enjoy identifying defects, improving software quality, and building reliable test automation solutions. My goal is to start my career as a QA Engineer, Automation Test Engineer, or SDET and contribute to delivering high-quality software products.
+
+I am continuously learning new testing tools and technologies while enhancing my problem-solving and automation skills to become a skilled Software Test Engineer.
+    </p>
+
+</section>
+
+<!-- SKILLS -->
+
+<<section id="skills">
+
+    <h2 class="title">🛠️ Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h4>📡 API Testing</h4>
+            <p>
+                Hands-on experience in <span class="highlight">FireFlink</span> and
+                <span class="highlight">Postman</span>. Good knowledge of
+                <span class="highlight">HTTP Methods</span>,
+                <span class="highlight">SOAP</span>,
+                <span class="highlight">REST APIs</span>,
+                <span class="highlight">JSON</span>,
+                <span class="highlight">XML</span>,
+                <span class="highlight">CRUD Operations</span>,
+                <span class="highlight">Basic Auth</span>,
+                <span class="highlight">Bearer Token</span>,
+                <span class="highlight">Newman</span>,
+                and <span class="highlight">JSON Path Validation</span>.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h4>☕ Core Java</h4>
+            <p>
+                Strong knowledge of <span class="highlight">OOP Concepts</span>
+                including <span class="highlight">Inheritance</span>,
+                <span class="highlight">Polymorphism</span>,
+                <span class="highlight">Abstraction</span>,
+                <span class="highlight">Encapsulation</span>,
+                <span class="highlight">Collections</span>,
+                <span class="highlight">Exception Handling</span>,
+                <span class="highlight">File Handling</span>,
+                <span class="highlight">Threads</span>,
+                and <span class="highlight">Java 19</span>.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h4>🧪 Selenium Automation</h4>
+            <p>
+                Strong knowledge of
+                <span class="highlight">Selenium Architecture</span>,
+                <span class="highlight">Locator Strategies</span>,
+                <span class="highlight">POM Design Pattern</span>,
+                <span class="highlight">TestNG</span>,
+                <span class="highlight">Maven</span>,
+                <span class="highlight">Implicit & Explicit Waits</span>,
+                <span class="highlight">Automation Frameworks</span>,
+                <span class="highlight">Parallel Execution</span>,
+                and <span class="highlight">Screenshot Capture</span>.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h4>🛢️ SQL</h4>
+            <p>
+                Extensive knowledge in
+                <span class="highlight">SQL Queries</span>,
+                <span class="highlight">CRUD Operations</span>,
+                <span class="highlight">Joins</span>,
+                <span class="highlight">Sub Queries</span>,
+                <span class="highlight">Functions</span>,
+                <span class="highlight">Views</span>,
+                <span class="highlight">DDL</span>,
+                <span class="highlight">DML</span>,
+                <span class="highlight">TCL</span>,
+                <span class="highlight">DCL</span>,
+                <span class="highlight">DQL</span>,
+                and <span class="highlight">400+ SQL Queries</span>.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h4>✅ Manual Testing</h4>
+            <p>
+                Strong knowledge of
+                <span class="highlight">SDLC</span>,
+                <span class="highlight">STLC</span>,
+                <span class="highlight">Smoke Testing</span>,
+                <span class="highlight">Functional Testing</span>,
+                <span class="highlight">Integration Testing</span>,
+                <span class="highlight">Regression Testing</span>,
+                <span class="highlight">Performance Testing</span>,
+                <span class="highlight">I18N</span>,
+                <span class="highlight">L10N</span>,
+                and <span class="highlight">Test Plan Preparation</span>.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Certification-->
+
+<section id="certifications">
+
+    <h2 class="title">🏆 Certifications</h2>
+
+    <div class="skills-container">
+
+        <!-- Full Stack Java Internship -->
+        <div class="skill-card">
+            <i class="fas fa-laptop-code cert-icon"></i>
+            <h4>☕ Full Stack Java Internship</h4>
+            <p>
+                Successfully completed a Long-Term Industrial Internship in
+                <span class="highlight">Full Stack Java Development</span>
+                conducted by
+                <span class="highlight">BR Concepts Pvt Ltd</span>.
+                Gained hands-on experience in Java development, software engineering,
+                and industry-oriented project implementation.
+            </p>
+        </div>
+
+        <!-- Advanced Python Workshop -->
+        <div class="skill-card">
+            <i class="fab fa-python cert-icon"></i>
+            <h4>🐍 Advanced Python Workshop</h4>
+            <p>
+                Successfully completed a 10-Day Workshop on
+                <span class="highlight">Advanced Python</span>
+                conducted by
+                <span class="highlight">Webvoid Technologies</span>
+                in collaboration with
+                <span class="highlight">MJR College of Engineering and Technology</span>.
+            </p>
+        </div>
+
+        <!-- Python Programming Internship -->
+        <div class="skill-card">
+            <i class="fas fa-certificate cert-icon"></i>
+            <h4>💻 Python Programming Virtual Internship</h4>
+            <p>
+                Successfully completed a
+                <span class="highlight">Python Programming Virtual Internship</span>
+                conducted by
+                <span class="highlight">CodeBegun</span>
+                and supported by
+                <span class="highlight">SAVAS Tech Solution Pvt Ltd</span>.
+                Developed practical programming and problem-solving skills.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="title">
+        Projects
+    </h2>
+
+    <div class="project-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <h3>☁️ Secure Load Balancing for Big Data Analytics in Green Cloud Computing Environments</h3>
+
+            <p>
+                Developed a secure load balancing solution for Big Data Analytics
+                in cloud environments to improve resource utilization, performance,
+                and security.
+            </p>
+
+            <ul>
+                <li>✅ Identified test scenarios and prepared test cases.</li>
+                <li>✅ Improved system performance and resource utilization.</li>
+                <li>✅ Enhanced data security during analytics processing.</li>
+                <li>✅ Increased overall system reliability and efficiency.</li>
+            </ul>
+
+            <p>
+                <strong>🛠 Technologies:</strong>
+                Java, SQL, Cloud Computing, Big Data Analytics, Oracle SQL
+            </p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <h3>🎯 Object Detection Using YOLOv5</h3>
+
+            <p>
+                Built an intelligent object detection system capable of
+                identifying and classifying objects in real time using
+                YOLOv5 and Deep Learning techniques.
+            </p>
+
+            <ul>
+                <li>✅ Collected and preprocessed image datasets for training.</li>
+                <li>✅ Trained and fine-tuned the YOLOv5 model using PyTorch.</li>
+                <li>✅ Achieved accurate real-time object detection and classification.</li>
+                <li>✅ Improved detection efficiency through model optimization.</li>
+            </ul>
+
+            <p>
+                <strong>🛠 Technologies:</strong>
+                Python, YOLOv5, PyTorch, OpenCV, NumPy, Pandas, Google Colab
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2 class="title">
+        Contact Me
+    </h2>
+
+    <p>
+
+        <a
+            href="mailto:gopananavyasri@gmail.com"
+            class="contact-link"
+        >
+
+            <i class="fas fa-envelope"></i>
+
+            gopananavyasri@gmail.com
+
+        </a>
+
+    </p>
+
+    <p>
+
+        <a
+            href="tel:+919059117147"
+            class="contact-link"
+        >
+
+            <i class="fas fa-phone"></i>
+
+           +919059117147
+
+        </a>
+
+    </p>
+
+    <!-- SOCIAL ICONS -->
+
+    <div class="social-icons">
+
+        <a
+            href="https://www.linkedin.com/in/navyasri-gopana-5090ba347"
+            target="_blank"
+        >
+
+            <i class="fab fa-linkedin"></i>
+
+        </a>
+
+        <a
+            href="https://github.com/navya128-navi""
+            target="_blank"
+        >
+
+            <i class="fab fa-github"></i>
+
+        </a>
+
+
+    </div>
+
+</section>

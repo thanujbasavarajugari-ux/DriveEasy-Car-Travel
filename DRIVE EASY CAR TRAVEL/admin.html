@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Portal | DriveEasy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #2563eb
+    );
+    overflow:hidden;
+}
+
+/* Background Glow */
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#06b6d4;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:0.25;
+    top:-150px;
+    left:-100px;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#3b82f6;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:0.25;
+    bottom:-150px;
+    right:-100px;
+}
+
+/* Login Card */
+.login-container{
+    position:relative;
+    z-index:10;
+
+    width:400px;
+    padding:40px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.3);
+
+    text-align:center;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    margin:auto;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.1);
+
+    font-size:35px;
+    color:white;
+}
+
+h1{
+    color:white;
+    margin-top:20px;
+    font-size:28px;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    font-size:14px;
+    margin:8px 0 30px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+
+    border:none;
+    outline:none;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,0.12);
+
+    color:white;
+    font-size:15px;
+}
+
+.input-group input::placeholder{
+    color:#cbd5e1;
+}
+
+.login-btn{
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#06b6d4;
+
+    color:white;
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#0891b2;
+}
+
+.footer-text{
+    color:#94a3b8;
+    margin-top:20px;
+    font-size:13px;
+}
+
+#error{
+    color:#ff7b7b;
+    margin-top:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="logo">🔐</div>
+
+<h1>Admin Portal</h1>
+
+<p class="subtitle">
+DriveEasy Travel Management System
+</p>
+
+<div class="input-group">
+<input
+type="email"
+id="username"
+placeholder="Enter Email">
+</div>
+
+<div class="input-group">
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+</div>
+
+<button class="login-btn" onclick="loginAdmin()">
+Login
+</button>
+
+<p id="error"></p>
+
+<div class="footer-text">
+© 2026 DriveEasy Admin Dashboard
+</div>
+
+</div>
+
+<script>
+
+function loginAdmin(){
+
+const username =
+document.getElementById("username").value;
+
+const password =
+document.getElementById("password").value;
+
+if(
+username==="thanujbasavarajugari@gmail.com" &&
+password==="Chinnu@1980"
+){
+window.location.href="bookings.html";
+}
+else{
+document.getElementById("error").innerHTML =
+"Invalid Email or Password";
+}
+
+}
+
+</script>
+
+</body>
+</html>
+
