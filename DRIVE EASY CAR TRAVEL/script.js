@@ -70,3 +70,13 @@ window.open(
 );
 
 bookingForm.reset();
+
+        } catch (err) {
+
+            alert("Network Error: " + err.message);
+
+        }
+
+    });
+
+}
