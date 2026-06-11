@@ -38,20 +38,35 @@ if (bookingForm) {
                 .from("bookings")
                 .insert([booking]);
 
-            if (error) {
-                alert("Supabase Error: " + error.message);
-                return;
-            }
-
-            alert("Booking Successful");
-            bookingForm.reset();
-
-        } catch (err) {
-
-            alert("Network Error: " + err.message);
-
-        }
-
-    });
-
+          if (error) {
+    alert("Supabase Error: " + error.message);
+    return;
 }
+
+alert("Booking Successful");
+
+// MAKE WEBHOOK
+await fetch("https://hook.eu1.make.com/lwfwjmg4tfr539io0gmsma9tmdltg0vg", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(booking)
+});
+
+const message =
+`🚗 New Booking
+
+Name: ${booking.fullname}
+Phone: ${booking.phone}
+Pickup: ${booking.pickup_location}
+Drop: ${booking.drop_location}
+Date: ${booking.pickup_date}
+Passengers: ${booking.passengers}`;
+
+window.open(
+`https://wa.me/917569782982?text=${encodeURIComponent(message)}`,
+"_blank"
+);
+
+bookingForm.reset();
